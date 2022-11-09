@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Gentium+Book+Basic:wght@400;700&family=Gentium+Plus:wght@400;700&family=Roboto+Slab:wght@100;300;400;500;700&display=swap');
 * {
   font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -47,12 +48,46 @@ nav{
     color: #e84393;
 }
 .navlinks a{
-    font-size: 1.75rem;
-    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    text-transform: uppercase;
+
 }
-.navlinks a:hover{
+.navlinks a::before{
+    content: "";
+    width: 0;
+    height: 0.5rem;
+    display: block;
+    position: absolute;
+    bottom: -0.7rem;
+    left: 0;
+
+}
+
+.redes p{
+    margin: 0 0 0 1rem;
+    font-size: 1.7rem;
+
+}
+.redes{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+.redes .fa-brands{
+    margin: 0 0.2rem;
     color: #e84393;
+    cursor: pointer;
+
+
+}
+.navlinks a:hover::before{
     transition: 0.2s;
+    width: 100%;
+    background-color: #e84393;
+
+
 
 }
 .home{
@@ -72,10 +107,17 @@ nav{
 
 }
 .text h3{
-    font-family: "aloevera";
     font-size: 3.2rem;
     text-transform: uppercase;
     color: #e84393;
+    font-family: "aloevera";
+    /*
+font-family: 'David Libre', serif;
+font-family: 'Gentium Book Basic', serif;
+font-family: 'Gentium Plus', serif;
+
+font-family: 'Roboto Slab', serif;  
+*/  
 
 }
 
@@ -140,7 +182,7 @@ nav{
 }
 
   
-@media(max-width: 510px){
+@media(max-width: 630px){
     .content{
         min-height: 100vh;
         background-color: rgb(0, 0, 0, .8);
@@ -203,6 +245,15 @@ nav{
     }
     nav{
         padding: 0.5rem 7%;
+    }
+    .navlinks a:hover::before{
+        width: 0;
+    
+    
+    
+    }
+    .redes{
+        display: none;
     }
     
 
